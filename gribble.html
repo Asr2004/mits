@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .outerbox {
+      background-color:#d4caca;
+      border-radius: 8px;
+      padding: 20px;
+      width: 960px;
+      height: 650px;
+    }
+
+    .inside {
+      border: 1px solid #333;
+      box-shadow: #333;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      
+    }
+    .button-group{
+      background-color: #F4F4f4;
+      border: 1px solid #8f9195;
+      font-size: 16px;
+      color: #393c41;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 20px;
+      margin-left: 10px;
+      position: absolute;
+      left: 35%;
+
+    }
+    
+    .button-group button{
+        border: none;
+    }
+    .first{
+      background-color: #F4F4f4;
+      border: 1px solid #8f9195;
+      font-size: 16px;
+      color: #393c41;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 20px;
+    }
+    .middle{
+      background-color: #F4F4f4;
+      border: 1px solid #8f9195;
+      font-size: 16px;
+      color: #393c41;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 20px;
+      position: relative;
+      left :680px;
+    }
+    .notification{
+        background-color: #F4F4f4;
+      border: 1px solid #8f9195;
+      font-size: 16px;
+      color: #393c41;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 20px;
+      position: relative;
+      left :688px;
+
+    }
+    .user{
+      background-color: #F4F4f4;
+      border: 1px solid #8f9195;
+      font-size: 16px;
+      color: #393c41;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 20px;
+      position: relative;
+      left :695px;
+
+    }
+    .profile{
+        margin: 10px;
+        display: flex;
+        justify-content:flex-start;
+        gap: 12px;
+    }
+    .name {
+        margin-top: 10px;
+        font-weight: 100;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+    }
+    .profile button{
+        border: none;
+        border-radius: 15px;
+        padding: 6px 28px;
+        position: relative;
+        left: -10px;
+        margin-top: 5px;
+    }
+    .inter{
+        background-color: black;
+        color: white;
+
+    }
+    .hire{
+        background-color: rgb(164, 164, 60);
+        color: white;
+    }
+    .pro{
+        background-color: black;
+        color: white;
+    }
+    .out{
+        background-color:grey;
+        color: black;
+        border: 1px solid black;
+    }
+    .oubox {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 120px 70px 200px;
+        gap: 5px;
+        margin-top: 20px;
+      }
+  
+      .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .box{
+        border-radius: 10px;
+      }
+
+    .box1 {
+        grid-row: 1/3;
+        grid-column: 1/2;
+    }
+    .virat{
+        position: relative;
+        display: flex;
+        gap: 90px;
+    }
+    .virat p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+        position: relative;
+        bottom: 60px;
+        color: white;
+        left: 20px;
+    }
+    .virat button{
+        border:1px solid white;
+        opacity: 0.90;
+        border-radius: 15px;
+        padding: 0px 10px;
+        height: 30px;
+        position: relative;
+        bottom: 40px;
+    
+  }
+    .box2{
+        grid-row: 1/3;
+        grid-column: 2/3;
+        overflow: hidden;
+    }
+    .progress-box, .progress-box3{
+        background: #fff;
+        border-radius: 20px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        object-fit: cover;
+      }
+      
+      .progress-header,.progress-header3{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .progress-header h3 {
+        margin: 0;
+        font-size: 17px;
+        
+      }    
+      .info-icon {
+        background: #eee;
+        border-radius: 50%;
+        width: 22px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: #333;
+      }  
+      .progress-time {
+        margin-top: 5px;
+        text-align: left;
+      }     
+      .progress-time .main-time {
+        font-size: 15px;
+
+      }    
+      .sub-text {
+        font-size: 12px;
+        color: #777;
+      }
+      
+      .progress-chart {
+        margin: 8px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 70px;
+        padding: 5px;
+      }
+      .bar {
+        width: 10px;
+        background: #f8cb72;
+        border-radius: 10px 10px 0 0;
+      }     
+      .progress-footer li{
+        display: flex;
+        font-size: 10px;
+        color: #999;
+        padding-right: 2px;
+      }
+      
+      .highlight-time {
+        background: #f8cb72;
+        padding: 4px  4px 4px 20px;
+        border-radius: 12px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        align-content: space-evenly;
+        gap: 20px;
+      }
+      
+    .box3{
+        grid-row: 1/3;
+        grid-column: 3/4;
+       
+    }
+    .time img{
+        height: 95px;
+        width: 90px;
+        border-radius: 50%;
+        position: relative;
+        left: 60px;
+    }
+    .paused {
+        position: relative;
+        left: 100px;
+        
+    }
+    .box4{
+        grid-row: 1/4;
+        grid-column: 4/5;
+    }
+    .pro4{
+        border-radius: 20px;
+        padding: 5px 5px;
+    }
+    .pro4 img{
+        height: 400px;
+        width: 190px;
+        
+    }
+    .box5{
+        grid-row: 3/4;
+        grid-column: 1/2;
+        
+    }
+    .profile5, .profile6 {
+        background: #fff;
+        border-radius: 20px;
+        padding: 5px 20px 5px 20px;
+        height: 190px;
+        overflow: hidden;
+    }
+    .profile5 p{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0 0 10px 0;
+        border-bottom: 1px dashed black;
+        
+        
+    }
+    .box6{
+        grid-row: 3/4;
+        grid-column: 2/4;
+        
+    }
+    .profile6 img{
+        width: 454px;
+        position: relative;
+        right:17px;
+        height: 220px;
+        top: -10px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="outerbox">
+      <div class="inside">
+        <header>
+          <nav class="header">
+            <div class="nav-item">
+              <button class="first">Crextio</button>
+              <div class="button-group">
+                <button class="btn">Dashboard</button>
+                <button>People</button>
+                <button>Hiring</button>
+                <button>devices</button>
+                <button>Apps</button>
+                <button>Salary</button>
+                <button>calender</button>
+                <button>Reviews</button>
+              </div>
+              <button class="middle"><i class="fa-solid fa-gear"></i>Settings</button>
+              <button class="notification"><i class="fa-regular fa-bell"></i></button>
+              <button class="user"><i class="fa-solid fa-user"></i></button>
+            </div>
+          </nav>
+        </header>
+        <div class="heading">
+            <h1>Welcome in,Nixitio</h1>
+            <div class="profile">
+                <div class="profile1">
+                    <div class="name">Interviews</div>
+                    <button class="inter">15%</button>
+                
+                </div>
+                <div class="profile2">
+                    <div class="name">Hired</div>
+                    <button class="hire">15%</button> 
+                </div>
+                <div class="profile3">
+                    <div class="name">Project time</div>
+                    <button class="pro">50%</button>
+                
+                </div>
+                <div class="profile4">
+                    <div class="name">Output</div>
+                    <button class="out">10%</button>
+                
+                </div>
+            </div>
+        </div>
+        <div class="oubox">
+            <div class="box box1"><img src="/asserts/virat.jpg" alt="">
+                <div class="virat">
+                    <p>Virat Kohli<br> Cricketer</p>
+                    <button>$1,200</button>
+                </div>
+
+            </div>
+            <div class="box box2">
+                <div class="progress-box">
+                    <div class="progress-header">
+                        <h3>Progress</h3>
+                        <div class="info-icon">i</div>
+                    </div>
+                    <div class="progress-time">
+                        <div class="main-time">6.1h</div>
+                        <div class="sub-text">Work Time This Week</div>
+                    </div>
+                    <div class="progress-chart">
+                        <div class="bar" style="height: 30%"></div>
+                        <div class="bar" style="height: 50%"></div>
+                        <div class="bar" style="height: 70%"></div>
+                        <div class="bar" style="height: 90%"></div>
+                        <div class="bar" style="height: 60%"></div>
+                        <div class="bar" style="height: 40%"></div>
+                        <div class="bar" style="height: 80%"></div>
+                    </div>
+                    <div class="progress-footer">
+                        <div class="highlight-time">
+                            <li>S</li>
+                            <li>M</li>
+                            <li>T</li>
+                            <li>W</li>
+                            <li>T</li>
+                            <li>F</li>
+                            <li>S</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box box3">
+                <div class="progress-box3">
+                    <div class="progress-header3">
+                        <h3>Time tracker</h3>
+                        <div class="info-icon">i</div>
+                    </div>
+                    <div class="time"><img src="/asserts/Screenshot 2025-04-30 010702.png" alt=""></div>
+                    <div class="paused"><i class="fa-solid fa-circle-pause"></i></div>
+                </div>
+            </div>
+            <div class="box box4">
+                <div class="pro4"><img src="/asserts/Screenshot 2025-04-30 014042.png" alt=""></div>
+            </div>
+            <div class="box box5">
+                <div class="profile5">
+                    <p>Pension contribution</p>
+                    <p>MacBook Air</p>
+                    <p>Compensation Summary</p>
+                    <p>Employee Benefits</p>
+
+                </div>
+            </div>
+            <div class="box box6">
+                <div class="profile6"><img src="/asserts/Screenshot 2025-04-30 014016.png" alt=""></div>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
